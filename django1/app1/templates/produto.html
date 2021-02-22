@@ -2,13 +2,10 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>DJango index</title>
+    <title>Produto</title>
 </head>
 <body>
-<h1>Index</h1>
-<h2>{{ curso }}</h2>
-<p>{{ outro }}</p>
-<span>{{ logado }}</span>
+<h1>Produto</h1>
 
 <table>
     <thead>
@@ -19,10 +16,10 @@
         </tr>
     </thead>
     <tbody>
-    {% for produto in produtos %}
+
         <tr>
             <td>
-                <p><a href="{% url 'produto' produto.id %}">{{produto.nome}}</a></p>
+                <p><a href="{% url 'index' %}">{{produto.nome}}</a></p>
             </td>
             <td>
                 <p>{{produto.preco}}</p>
@@ -31,7 +28,6 @@
                 <p>{{produto.estoque}}</p>
             </td>
         </tr>
-    {% endfor %}
     </tbody>
 </table>
 </body>

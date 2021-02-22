@@ -3,7 +3,8 @@ teoria:
 projeto x app: No projeto adiciona varios apps. ex: aplicaçãod e e-commerce tem um app p gerenciar comprar, outra p gerenciar produtos outra p gerenciar clientes, gerenciar cupons...
 as aplicações são plugaveis, podem ser utilizadas em mais de um projeto
 MTV do django, funciona parecido com o MVC, porém as views fazem o trabalho do controller renderizando os templates e enviando as informações para o model
-
+criar urls.ṕy na aplicação e importar no projeto, para encapsular e organziar
+colocar . antes para importar da mesma pasta, ex: .views
 
 comandos:
 pip3 freeze > requirements.txt

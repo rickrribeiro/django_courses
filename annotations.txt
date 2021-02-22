@@ -12,3 +12,5 @@ django-admin startproject project1 .
 django-admin startapp app1
 rodar projeto: python manage.py runserver
 settings.py -> allowed_host = ['*']  e debug = true (para desenvolvimento)
+criar migration: python3 manage.py makemigrations
+executar migration: python3 manage.py migrate

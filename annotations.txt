@@ -1,10 +1,13 @@
+## LINK Documentação: https://docs.djangoproject.com/en/3.1/
+
 projeto x app: No projeto adiciona varios apps. ex: aplicaçãod e e-commerce tem um app p gerenciar comprar, outra p gerenciar produtos outra p gerenciar clientes, gerenciar cupons...
 as aplicações são plugaveis, podem ser utilizadas em mais de um projeto
 MTV do django, funciona parecido com o MVC, porém as views fazem o trabalho do controller renderizando os templates e enviando as informações para o model
 criar urls.ṕy na aplicação e importar no projeto, para encapsular e organziar
 colocar . antes para importar da mesma pasta, ex: .views
 no html {% url 'produto' produto.id %} o produto é a rota e o id o id na rota
-
+debug=false entra em modo produção
+django runserver não provê arquivos estáticos em produçao
 
 comandos:
 lista de comandos: python3 manage.py
@@ -16,6 +19,7 @@ settings.py -> allowed_host = ['*']  e debug = true (para desenvolvimento)
 criar migration: python3 manage.py makemigrations
 executar migration: python3 manage.py migrate
 criar user admin: python3 manage.py createsuperuser
+coletar arquivos static para produção: python3 manage.py collectstatic
 
 print(f'oi {request.user.first_name}')
 

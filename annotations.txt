@@ -34,3 +34,9 @@ exemplo shell:
 -produto.save()
 -dir(produto)
 -produto.delete() 
+
+
+publish tutorial:
+debug false
+allow host
+pip3 install whitenoise gunicorn (white noise gerencia arquivos estaticos, gunicorn roda a aplicação)

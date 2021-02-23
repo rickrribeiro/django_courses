@@ -4,23 +4,31 @@ from django.shortcuts import get_object_or_404
 from django.http import HttpResponse
 from django.template import loader
 
-from .models import Produto
+from .models import Projeto
+from .querysets import getProjectsByLanguage
 # Create your views here.
 
 def index(request):
-    print(dir(request.user))
-    if str(request.user) == 'AnonymousUser':
-        teste = 'Usuário não logado'
-    else:
-        teste = 'Usuario logado'
+    # print(dir(request.user))
 
-    produtos = Produto.objects.all()
+    # if str(request.user) == 'AnonymousUser':
+    #     teste = 'Usuário não logado'
+    # else:
+    #     teste = 'Usuario logado'
+
+    projetosNode = getProjectsByLanguage('Node')
+    #projetosPython = getProjectsByLanguage('Python')
+    projetosPython ='erro aq' # Projeto.objects.filter(linguagem='Python')
+    projetosReact = getProjectsByLanguage('React')
+    projetosHTML = getProjectsByLanguage('HTML')
     context ={
-        'curso':'Programação django',
-        'outro':'outro param',
-        'logado' : teste,
-        'produtos': produtos
+       'projetosNode': projetosNode,
+       'projetosPython':projetosPython,
+       'projetosReact':projetosReact,
+       'projetosHTML':projetosHTML
+    
     }
+    print(projetosPython)
     return render(request, 'index.html', context)
 
 def contato(request):

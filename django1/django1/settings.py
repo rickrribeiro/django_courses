@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'g+7j(t=49zal6wxzdlhpd=)htjs=01ky2m!10mtvc)m1)wsfvl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['django01-rickrribeiro.herokuapp.com'] #colocar url quando for definida
+ALLOWED_HOSTS = ['*'] #colocar url quando for definida
 
 
 # Application definition

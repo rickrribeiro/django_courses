@@ -8,6 +8,7 @@ colocar . antes para importar da mesma pasta, ex: .views
 no html {% url 'produto' produto.id %} o produto é a rota e o id o id na rota
 debug=false entra em modo produção
 django runserver não provê arquivos estáticos em produçao
+tem que mudar para false o debug para testar as paginas de erro
 
 comandos:
 lista de comandos: python3 manage.py

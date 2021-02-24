@@ -11,6 +11,8 @@ django runserver não provê arquivos estáticos em produçao
 tem que mudar para false o debug para testar as paginas de erro
 
 comandos:
+acessar venv: source venv/bin/activate
+
 lista de comandos: python3 manage.py
 pip3 freeze > requirements.txt
 django-admin startproject project1 .

@@ -41,3 +41,4 @@ debug false
 allow host
 pip3 install whitenoise gunicorn (white noise gerencia arquivos estaticos, gunicorn roda a aplicação)
 utilizando o heroku p hospedar
+erro: heroku logs --tail

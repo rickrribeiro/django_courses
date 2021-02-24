@@ -25,7 +25,7 @@ criar user admin: python3 manage.py createsuperuser
 coletar arquivos static para produção: python3 manage.py collectstatic
 
 print(f'oi {request.user.first_name}')
-
+sudo apt-get install libmysqlclient-dev python3-dev
 
 exemplo shell:
 -python3 manage.py shell

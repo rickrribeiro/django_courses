@@ -1,0 +1,2 @@
+ver a diferença nos requirements 1 e 2
+se der erro de usuario no banco,ver aula 38 aos 11:22

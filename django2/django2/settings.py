@@ -132,8 +132,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 EMAIL_BACKEND= 'django.core.mail.backends.console.EmailBackend'
 
 #caso for publicar em um local com servidor de email
-#EMAIL_HOST='geralmente localhost'
-#EMAIL_HOST_USER='GERALMENTE no-reply@seudominio.com.br'
-#EMAIL_PORT = geralmente 587
-#EMAIL_USER_TLS = TRUE (CRIPTOGRAFIA)
+#EMAIL_HOST='localhost'
+#EMAIL_HOST_USER='rickribeiro99@gmail.com'
+#EMAIL_PORT =  587
+#EMAIL_USER_TLS = TRUE #(CRIPTOGRAFIA)
 #EMAIL_HOST_PASSWORD= 'SENHA'

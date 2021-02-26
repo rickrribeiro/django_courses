@@ -18,7 +18,7 @@ class Base(models.Model):
 class Produto(Base):
     nome = models.CharField('Nome', max_length=100)
     preco = models.DecimalField('Preço', max_digits=8, decimal_places=2)
-    estoque = models.ImageField('estoque')
+    estoque = models.IntegerField('estoque')
     imagem = StdImageField('Imagem', upload_to='produtos', variations={'thumb':(124,124)})
     slug = models.SlugField('Slug', max_length=100, blank= True, editable=False)        
     

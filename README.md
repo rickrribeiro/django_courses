@@ -6,7 +6,7 @@ made using Django
 ## database:
 ### django1:
 - sqlite
-###django2: 
+### django2: 
 - mysql
 
 ## concepts: 

@@ -1,13 +1,25 @@
-
+{% load bootstrap4%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Produto</title>
-  
+  {% bootstrap_css%}
 </head>
 <body>
-<h1>Produto</h1>
+  <div class="container">
+    <h1>Produto</h1>
+    {% bootstrap_messages %}
+    <!-- enctype multipart/form-data para upload de arquivos no form do html -->
+    <form action="{% url 'produto' %}" method="post" autocomplete="off" enctype="multipart/form-data">
+     {% csrf_token %}
+     {% bootstrap_form form %}
+     {% buttons %}
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+     {% endbuttons %}
+    </form>
+  </div>
   
+{% bootstrap_javascript jquery='full' %}
 </body>
 </html>

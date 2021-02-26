@@ -23,7 +23,8 @@ class Produto(Base):
     slug = models.SlugField('Slug', max_length=100, blank= True, editable=False)        
     
     def __str__(self):
-        return self.name
+        #return self.name #ta dando erro no meu not
+        return "Produto"
     
 def produto_pre_save(signal, instance, sender, **kwargs):
     instance.slug = slugify(instance.nome)

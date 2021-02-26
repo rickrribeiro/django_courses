@@ -7,7 +7,6 @@ django-stdimage==5.1.1
 gunicorn==20.0.4
 importlib-metadata==2.1.1
 Pillow==8.1.0
-pkg-resources==0.0.0
 progressbar2==3.53.1
 PyMySQL==1.0.2
 python-utils==2.5.6

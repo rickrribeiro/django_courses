@@ -19,12 +19,11 @@ class Produto(Base):
     nome = models.CharField('Nome', max_length=100)
     preco = models.DecimalField('Preço', max_digits=8, decimal_places=2)
     estoque = models.IntegerField('estoque')
-    imagem = StdImageField('Imagem', upload_to='produtos', variations={'thumb':(124,124)})
+    imagem = StdImageField('Imagem', upload_to='produtos', variations={'thumb':(124,124)}) #cria uma otura imagem com esse tamanho
     slug = models.SlugField('Slug', max_length=100, blank= True, editable=False)        
     
     def __str__(self):
-        #return self.name #ta dando erro no meu not
-        return "Produto"
+        return self.nome 
     
 def produto_pre_save(signal, instance, sender, **kwargs):
     instance.slug = slugify(instance.nome)

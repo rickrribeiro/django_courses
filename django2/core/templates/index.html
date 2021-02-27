@@ -1,13 +1,38 @@
-
+{% load bootstrap4 %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Index</title>
-  
+  {% bootstrap_css %}
 </head>
 <body>
-<h1>Index </h1>
-  
+  <div class='container'>
+    <h1>Produtos </h1>
+    
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Produto</th>
+          <th scope="col">Preço</th>
+          <th scope="col">Estoque</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for produto in produtos%}
+          <tr>
+            <td scope="row">{{ produto.id }}</td>
+            <td scope="row">{{ produto.nome }}</td>
+            <td scope="row">{{ produto.preco }}</td>
+            <td scope="row">{{ produto.estoque }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+  </div>
+
+{% bootstrap_javascript jquery='full' %}
 </body>
 </html>

@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'nq5d$@^_t&9#2osb$&+t07lnba8rpso435(usdzh_gq%8d7=)k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -40,9 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core',
+    
     'bootstrap4',
     'stdimage'
+    'core',
 ]
 
 MIDDLEWARE = [
@@ -95,6 +96,7 @@ DATABASES = {
 DATABASES = {
     'default': dj_database_url.config()
 }
+
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 

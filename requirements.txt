@@ -88,7 +88,6 @@ PyQtWebEngine==5.14.0
 pyquery==1.4.1
 pyRFC3339==1.1
 pyrsistent==0.15.5
-python-apt==2.0.0+ubuntu0.20.4.3
 python-dateutil==2.7.3
 python-debian===0.1.36ubuntu1
 python-utils==2.5.6

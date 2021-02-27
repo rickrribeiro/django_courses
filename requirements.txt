@@ -17,7 +17,6 @@ cssselect==1.1.0
 cycler==0.10.0
 dbus-python==1.2.16
 decorator==4.4.2
-defer==1.0.6
 dj-database-url==0.5.0
 Django==3.1.7
 django-adminlte3==0.1.6

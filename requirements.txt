@@ -12,7 +12,6 @@ certifi==2020.6.20
 chardet==3.0.4
 Click==7.0
 colorama==0.4.3
-command-not-found==0.3
 cryptography==2.8
 cssselect==1.1.0
 cupshelpers==1.0
@@ -20,8 +19,6 @@ cycler==0.10.0
 dbus-python==1.2.16
 decorator==4.4.2
 defer==1.0.6
-distro==1.4.0
-distro-info===0.23ubuntu1
 dj-database-url==0.5.0
 Django==3.1.7
 django-adminlte3==0.1.6

@@ -15,7 +15,6 @@ colorama==0.4.3
 cryptography==2.8
 cssselect==1.1.0
 cycler==0.10.0
-dbus-python==1.2.16
 decorator==4.4.2
 dj-database-url==0.5.0
 Django==3.1.7
@@ -70,12 +69,9 @@ protobuf==3.6.1
 psycopg2-binary==2.8.6
 py7zr==0.11.0
 pyasn1==0.4.2
-PyAudio==0.2.11
 pycairo==1.16.2
 pycryptodome==3.9.9
-pycups==1.9.73
 Pygments==2.3.1
-PyGObject==3.36.0
 PyJWT==1.7.1
 pylint==2.6.0
 pymacaroons==0.13.0

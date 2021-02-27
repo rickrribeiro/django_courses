@@ -26,4 +26,6 @@ made using Django
 - more views, routes and models
 - forms
 - send email
+- forms with image
+- Saving forms with images to DB
 - IM HERE

@@ -26,11 +26,7 @@ def produto(request):
     if str(request.method) == 'POST':
         form = ProdutoModelForm(request.POST, request.FILES)
         if form.is_valid():
-            prod = form.save(commit=False)
-            print(f'Nome: {prod.nome}')
-            print(f'Preco: {prod.preco}')
-            print(f'est: {prod.estoque}')
-            print(f'IMG: {prod.imagem}')
+            form.save()
             messages.success(request, 'Produto salvo com sucesso.')
             form = ProdutoModelForm()
         else:

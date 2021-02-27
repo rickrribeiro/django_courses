@@ -113,8 +113,6 @@ systemd-python==234
 termcolor==1.1.0
 texttable==1.6.3
 toml==0.10.2
-ufw==0.36
-unattended-upgrades==0.1
 urllib3==1.25.10
 usb-creator==0.3.7
 w3lib==1.22.0

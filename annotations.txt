@@ -1,0 +1,49 @@
+## LINK Documentação: https://docs.djangoproject.com/en/3.1/
+
+projeto x app: No projeto adiciona varios apps. ex: aplicaçãod e e-commerce tem um app p gerenciar comprar, outra p gerenciar produtos outra p gerenciar clientes, gerenciar cupons...
+as aplicações são plugaveis, podem ser utilizadas em mais de um projeto
+MTV do django, funciona parecido com o MVC, porém as views fazem o trabalho do controller renderizando os templates e enviando as informações para o model
+criar urls.ṕy na aplicação e importar no projeto, para encapsular e organziar
+colocar . antes para importar da mesma pasta, ex: .views
+no html {% url 'produto' produto.id %} o produto é a rota e o id o id na rota
+debug=false entra em modo produção
+django runserver não provê arquivos estáticos em produçao
+tem que mudar para false o debug para testar as paginas de erro
+csrf token serve para validar forms para que não sejam alterados no caminho
+enctype multipart/form-data para upload de arquivos no form do html
++ concatena lista no python 
+ORM -> linka a classe com a tabela relacional
+
+comandos:
+acessar venv: source venv/bin/activate
+lista de comandos: python3 manage.py
+pip3 freeze > requirements.txt
+django-admin startproject project1 .
+django-admin startapp app1
+rodar projeto: python manage.py runserver
+settings.py -> allowed_host = ['*']  e debug = true (para desenvolvimento)
+criar migration: python3 manage.py makemigrations
+executar migration: python3 manage.py migrate
+criar user admin: python3 manage.py createsuperuser
+coletar arquivos static para produção: python3 manage.py collectstatic
+
+print(f'oi {request.user.first_name}')
+sudo apt-get install libmysqlclient-dev python3-dev
+
+exemplo shell:
+-python3 manage.py shell
+-from app1.models import Produtos
+-produtos = Produto(nome="atari", preco=199, estoque=11)
+-produto.save()
+-produto.nome="playstation"
+-produto.save()
+-dir(produto)
+-produto.delete() 
+
+
+publish tutorial:
+debug false
+allow host
+pip3 install whitenoise gunicorn (white noise gerencia arquivos estaticos, gunicorn roda a aplicação)
+utilizando o heroku p hospedar
+erro: heroku logs --tail

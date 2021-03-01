@@ -38,4 +38,4 @@
 - publish with db
 
 ### django3
-- 
+- Class Based Views

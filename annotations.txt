@@ -38,7 +38,13 @@ adminlte:
 	    'django_adminlte_theme',
 	]
 	
-	
+
+mixins:
+sempre a essquerda e as views à direita
+sempre herdam do object 
+class abc(xxMixin, yyyMixin, View):
+
+
 exemplo shell:
 -python3 manage.py shell
 -from app1.models import Produtos

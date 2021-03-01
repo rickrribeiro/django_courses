@@ -15,6 +15,7 @@ enctype multipart/form-data para upload de arquivos no form do html
 ORM -> linka a classe com a tabela relacional
 
 comandos:
+criar venv: python -m venv "nome da venv"
 acessar venv: source venv/bin/activate
 lista de comandos: python3 manage.py
 pip3 freeze > requirements.txt

@@ -1,14 +1,18 @@
 # django_course
-project django1: https://ricardo-ribeiro.herokuapp.com/
-project django2: https://django2-rrr.herokuapp.com/
+- project django1: https://ricardo-ribeiro.herokuapp.com/
+- project django2: https://django2-rrr.herokuapp.com/
 
-made using Django
+- made using Django
 
 ## database:
 ### django1:
 - sqlite
 ### django2: 
 - mysql
+
+### django3: 
+- postgresql
+
 
 ## concepts: 
 
@@ -32,3 +36,6 @@ made using Django
 - Showing DB data 
 - User section
 - publish with db
+
+### django3
+- 

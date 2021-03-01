@@ -31,6 +31,14 @@ coletar arquivos static para produção: python3 manage.py collectstatic
 print(f'oi {request.user.first_name}')
 sudo apt-get install libmysqlclient-dev python3-dev
 
+adminlte:
+	pip install django-adminlte3
+	INSTALLED_APPS = [
+	    'django_adminlte',
+	    'django_adminlte_theme',
+	]
+	
+	
 exemplo shell:
 -python3 manage.py shell
 -from app1.models import Produtos

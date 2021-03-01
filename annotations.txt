@@ -39,11 +39,11 @@ adminlte:
 	]
 	
 
-mixins:
+mixins e class base views:
 sempre a essquerda e as views à direita
 sempre herdam do object 
 class abc(xxMixin, yyyMixin, View):
-
+ <a href="{% url 'index' %}"
 
 exemplo shell:
 -python3 manage.py shell

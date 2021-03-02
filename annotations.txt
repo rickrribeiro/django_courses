@@ -16,6 +16,7 @@ ORM -> linka a classe com a tabela relacional
 upload image django com stdimagefile, ele salva duas imagens com nome diferentes se tiverem o mesmo nome
 
 comandos:
+python -m http.server 
 criar venv: python -m venv "nome da venv"
 acessar venv: source venv/bin/activate
 lista de comandos: python3 manage.py
@@ -56,6 +57,9 @@ exemplo shell:
 -dir(produto)
 -produto.delete() 
 
+tests:
+todos os testes começam com test_
+python manage.py test
 
 publish tutorial:
 debug false

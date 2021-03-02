@@ -39,3 +39,6 @@
 
 ### django3
 - Class Based Views
+- mixins
+- Context Manager
+- uuid for filenames

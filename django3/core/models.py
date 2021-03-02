@@ -1,7 +1,12 @@
 from django.db import models
 from stdimage.models import StdImageField
+import uuid  # gerar hash aleatoria p evitar arquivos c nome duplicados
 
 # Create your models here.
+def get_file_path(_instance, filename):
+    ext = filename.split(".")[-1]
+    filename = f"{uuid.uuid4()}.{ext}"
+    return filename
 
 
 class Base(models.Model):
@@ -53,7 +58,7 @@ class Funcionario(Base):
     bio = models.TextField("Bio", max_length=100)
     image = StdImageField(
         "Imagem",
-        upload_to="funcionario",
+        upload_to=get_file_path,
         variations={"thumb": {"width": 480, "height": 480, "crop": True}},
     )
     facebook = models.CharField("Facebook", max_length=100, default="#")

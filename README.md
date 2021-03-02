@@ -1,6 +1,7 @@
 # django_course
 - project django1: https://ricardo-ribeiro.herokuapp.com/
 - project django2: https://django2-rrr.herokuapp.com/
+- project django3: https://django3-rrr.herokuapp.com/
 
 - made using Django
 
@@ -42,3 +43,6 @@
 - mixins
 - Context Manager
 - uuid for filenames
+- Forms with image and email
+- showing images and files
+- publish

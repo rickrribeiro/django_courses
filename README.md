@@ -46,3 +46,11 @@
 - Forms with image and email
 - showing images and files
 - publish
+
+### django4
+- Django User Model
+
+### tests
+- coverage
+- model_mommy
+- unit tests (views, models, forms)

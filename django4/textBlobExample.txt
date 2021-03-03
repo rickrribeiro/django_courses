@@ -1,0 +1,4 @@
+from textblob import textblob
+texto = TextBlob('texto teste')
+texto.translate(to='en')
+print(texto)

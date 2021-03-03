@@ -49,6 +49,9 @@
 
 ### django4
 - Django User Model
+- Admin and staff permissions
+- Custom User Model
+- Login and Authentication
 
 ### tests
 - coverage

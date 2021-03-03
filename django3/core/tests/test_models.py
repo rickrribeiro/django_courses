@@ -36,3 +36,11 @@ class FuncionarioTestCase(TestCase):
 
     def test_str(self):
         self.assertEquals(str(self.funcionario), self.funcionario.nome)
+
+
+class FeatureTestCase(TestCase):
+    def setUp(self):
+        self.feature = mommy.make("Feature")
+
+    def test_str(self):
+        self.assertEquals(str(self.feature), self.feature.nome)

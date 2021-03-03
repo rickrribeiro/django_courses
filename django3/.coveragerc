@@ -12,3 +12,4 @@ omit =
     */migrations/*
     */tests/*
     */venv/*
+    */asgi.py

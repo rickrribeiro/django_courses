@@ -43,4 +43,4 @@ class FeatureTestCase(TestCase):
         self.feature = mommy.make("Feature")
 
     def test_str(self):
-        self.assertEquals(str(self.feature), self.feature.nome)
+        self.assertEquals(str(self.feature), self.feature.feature)

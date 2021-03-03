@@ -46,6 +46,7 @@
 - Forms with image and email
 - showing images and files
 - publish
+- i18n forms, models, views and templates (not all project) 
 
 ### django4
 - Django User Model

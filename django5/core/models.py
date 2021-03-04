@@ -25,7 +25,7 @@ class Montadora(models.Model):
 
 
 def set_default_montadora():
-    return Montadora.objects.get_or_create(nome='Padrão')[0]  # (objeto, boolean)
+    return Montadora.objects.get_or_create(nome='Padrão')[0]  # retorna (objeto, boolean# true se criar, false se encontrar#)
 
 
 class Carro(models.Model):
@@ -41,6 +41,10 @@ class Carro(models.Model):
     # ManyToMany
     Um carro pode ser dirigido por vários motoristas
     e um motorista pode dirigir diversos carros.
+
+    #get_or_create
+    para evitar erros de foreignkey que quebram o projeto ou deletar 
+    em cascata, pode colocar um padrão
     """
     chassi = models.OneToOneField(Chassi, on_delete=models.CASCADE)
     montadora = models.ForeignKey(Montadora, on_delete=models.SET(set_default_montadora))

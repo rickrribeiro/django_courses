@@ -6,14 +6,15 @@
 - made using Django
 
 ## database:
+
 ### django1:
 - sqlite
+
 ### django2: 
 - mysql
 
 ### django3: 
 - postgresql
-
 
 ## concepts: 
 
@@ -53,6 +54,12 @@
 - Admin and staff permissions
 - Custom User Model
 - Login and Authentication
+
+### django5
+- ORM
+- Models relationships (1:1, 1:n, n:m)
+- Help Text
+
 
 ### tests
 - coverage

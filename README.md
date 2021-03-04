@@ -7,7 +7,7 @@
 
 ## database:
 
-### django1:
+### django1,4,5:
 - sqlite
 
 ### django2: 
@@ -15,6 +15,9 @@
 
 ### django3: 
 - postgresql
+
+### django6: 
+- Redis
 
 ## concepts: 
 
@@ -60,6 +63,11 @@
 - Models relationships (1:1, 1:n, n:m)
 - Help Text
 
+### django6
+- Realtime applications
+- Channels
+- redis
+- websocket configuration
 
 ### tests
 - coverage

@@ -69,6 +69,12 @@
 - redis
 - websocket configuration
 
+### django7
+- geolocation
+- Search place by ip
+- Search places by keyword and location
+- generate map with searched locations
+
 ### tests
 - coverage
 - model_mommy

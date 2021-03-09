@@ -75,6 +75,9 @@
 - Search places by keyword and location
 - generate map with searched locations
 
+### django8
+- charts
+
 ### tests
 - coverage
 - model_mommy

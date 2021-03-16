@@ -78,6 +78,9 @@
 ### django8
 - charts
 
+### django9
+- pagination
+
 ### tests
 - coverage
 - model_mommy

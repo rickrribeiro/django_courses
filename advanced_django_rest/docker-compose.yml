@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  app:
+    build:
+      context: .
+      args:
+      # to override the DOCKERFLIE env
+        - DEV=true
+    ports:
+      - "8000:8000"
+      # to always refresh :p map ./app to /app in the container
+    volumes:
+      - ./app:/app
+    command: sh -c "python manage.py runserver 0.0.0.0:8000"

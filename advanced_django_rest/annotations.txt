@@ -1,0 +1,11 @@
+docker-compose run --rm app sh -c "python manage.py collectstatic" 
+docker-compose run --rm app sh -c "python manage.py test" 
+docker-compose run --rm app sh -c "flake8" 
+docker-compose run --rm app sh -c "django-admin startproject app ."
+
+--rm remove the container when its stopped
+
+
+Pillow é uma biblioteca Python de processamento de imagens que permite abrir, manipular e salvar diversos formatos de imagem. Ela é muito utilizada em aplicações web para realizar tarefas como redimensionamento, conversão de formato, aplicação de filtros, entre outras operações em imagens.
+
+uWSGI é um servidor web e de aplicação escrito em Python. Ele é comumente utilizado para hospedar aplicativos web Python, incluindo frameworks populares como Django. O uWSGI atua como um intermediário entre o servidor web e o aplicativo Python, gerenciando solicitações HTTP, escalabilidade, balanceamento de carga e outras tarefas relacionadas à execução da aplicação.

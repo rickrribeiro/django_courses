@@ -2,10 +2,13 @@ version: '3.9'
 
 services:
   app:
+    depends_on:
+      # to wait for the db container to be ready, but remember the race condition problem, it has tto wait for db ready. This ensure that the CONTAINER is running, not the db
+      - db
     build:
       context: .
       args:
-      # to override the DOCKERFLIE env
+        # to override the DOCKERFLIE env
         - DEV=true
     ports:
       - "8000:8000"
@@ -13,3 +16,20 @@ services:
     volumes:
       - ./app:/app
     command: sh -c "python manage.py runserver 0.0.0.0:8000"
+    environment:
+      - DB_HOST=db
+      - DB_NAME=devdb
+      - DB_USER=devuser
+      - DB_PASSWORD=devpass
+
+  db:
+    image: postgres:13-alpine
+    volumes:
+      - dev-db-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=devdb
+      - POSTGRES_USER=devuser
+      - POSTGRES_PASSWORD=devpass
+volumes:
+  dev-db-data:
+  dev-static-data:

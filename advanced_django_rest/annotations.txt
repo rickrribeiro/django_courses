@@ -1,10 +1,12 @@
+Ctrl + ` 
+video about modules https://www.youtube.com/watch?v=QCSz0j8tGmI&t=750s
+
 docker-compose run --rm app sh -c "python manage.py collectstatic" 
 docker-compose run --rm app sh -c "python manage.py test" 
 docker-compose run --rm app sh -c "flake8" 
 docker-compose run --rm app sh -c "django-admin startproject app ."
 
 --rm remove the container when its stopped
-
 
 Pillow é uma biblioteca Python de processamento de imagens que permite abrir, manipular e salvar diversos formatos de imagem. Ela é muito utilizada em aplicações web para realizar tarefas como redimensionamento, conversão de formato, aplicação de filtros, entre outras operações em imagens.
 
@@ -19,3 +21,14 @@ magickmock/mock - replace real objects
 patch - overrides code
 
 How does Django detect tests in our project?: modules that starts with "test"
+
+para lembrar: se n cobrir no curso, ver custom python code no field do orm
+
+
+makemigrations
+migrate
+
+its recommended to create a custom usermodel
+
+drf-spectacular lib generates docs schemas. Can use the schema to serve swagger
+steps: generate a schema file, then parse into a gui

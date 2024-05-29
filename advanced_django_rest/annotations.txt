@@ -32,3 +32,16 @@ its recommended to create a custom usermodel
 
 drf-spectacular lib generates docs schemas. Can use the schema to serve swagger
 steps: generate a schema file, then parse into a gui
+
+
+apiview vs viewset
+view is the code that handles a request made to a url
+
+apiview is great for non crud apis
+- not good for simple crud apis
+- good for logic operations eg: auth, jobs, call external apis
+
+viewsets
+- focused around actions retriev, list, update, destroy
+- map to django modules
+- great for crud

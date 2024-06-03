@@ -45,3 +45,9 @@ viewsets
 - focused around actions retriev, list, update, destroy
 - map to django modules
 - great for crud
+
+pillow - lib to handle images
+
+manage.py colectfiles   - junta td static no root
+
+patch to replace function

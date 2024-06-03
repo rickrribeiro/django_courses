@@ -24,7 +24,7 @@ class TagSerializer(serializers.ModelSerializer):
 
 
 class RecipeSerializer(serializers.ModelSerializer):
-    tags = TagSerializer(many=True, required=False)
+    tags = TagSerializer(many=True, required=False) # nested serializers are readOnly, needs a custom logic to create
     ingredients = IngredientSerializer(many=True, required=False)
 
     class Meta:
@@ -57,7 +57,7 @@ class RecipeSerializer(serializers.ModelSerializer):
         tags = validated_data.pop('tags', [])
         ingredients = validated_data.pop('ingredients', [])
         recipe = Recipe.objects.create(**validated_data)
-        self._get_or_create_tags(tags, recipe)
+        self._get_or_create_tags(tags, recipe) # to create a new tag because nested serializers are read only
         self._get_or_create_ingredients(ingredients, recipe)
 
         return recipe
@@ -65,7 +65,7 @@ class RecipeSerializer(serializers.ModelSerializer):
     def update(self, instance, validated_data):
         tags = validated_data.pop('tags', None)
         ingredients = validated_data.pop('ingredients', None)
-        if tags is not None:
+        if tags is not None: # specify not none to dont skip empty array
             instance.tags.clear()
             self._get_or_create_tags(tags, instance)
         if ingredients is not None:

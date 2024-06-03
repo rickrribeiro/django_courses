@@ -23,6 +23,7 @@ from core.models import (
 from recipe import serializers
 
 
+# decorator for extra   documentation
 @extend_schema_view(
     list=extend_schema(
         parameters=[

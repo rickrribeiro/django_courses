@@ -5,4 +5,3 @@
 - advanced_django_rest: https://www.udemy.com/course/django-python-advanced (Build a Backend REST API with Python & Django - Advanced)
 
 https://learnxinyminutes.com/docs/python/
-TO TEST git configs local

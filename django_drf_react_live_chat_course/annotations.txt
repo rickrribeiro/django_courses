@@ -1,1 +1,7 @@
 npm create vite - cria o projeto com vite
+
+./manage.py spectacular --color --file schema.yml
+
+views actions can be class based or functions
+
+drf routers are used with viewsets

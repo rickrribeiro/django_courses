@@ -1,0 +1,7 @@
+openapi: 3.0.3
+info:
+  title: Django React Live Chat
+  version: 1.0.0
+  description: Django React Live Chat API
+paths: {}
+components: {}

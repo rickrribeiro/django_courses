@@ -1,8 +1,8 @@
-import { Box, Typography, styled, useMediaQuery } from "@mui/material";
+import { Box, styled, useMediaQuery } from "@mui/material";
 import MuiDrawer from "@mui/material/Drawer";
 import { useTheme } from "@mui/material/styles";
 import React, { useEffect, useState } from "react";
-import DrawToggle from "../../components/PrimaryDraw/DrawToggle";
+import ToggleDrawer from "../../components/PrimaryDraw/DrawToggle";
 
 type Props = {
   children: React.ReactNode;
@@ -33,7 +33,7 @@ const PrimaryDraw: React.FC<Props> = ({ children }) => {
       duration: theme.transitions.duration.enteringScreen,
     }),
     overflowX: "hidden",
-    width: `${theme.primaryDraw.closed}px`,
+    width: `${theme.primaryDraw.onCloseWidth}px`,
   });
 
   const Drawer = styled(
@@ -66,7 +66,7 @@ const PrimaryDraw: React.FC<Props> = ({ children }) => {
   };
 
   return (
-    // permanent: drawer is always open, temporary can one be opened or closed
+    // permanent is always open. Temporary can be open or closed
     <Drawer
       open={open}
       variant={isBelowSm ? "temporary" : "permanent"}
@@ -84,7 +84,7 @@ const PrimaryDraw: React.FC<Props> = ({ children }) => {
         </Typography> */}
       {/* </Box> */}
       <Box>
-        {/* {
+        {
           // Iterate Over Children
           // if the child is a valid react element, then clone it and pass the open prop to it
           React.Children.map(children, (child) => {
@@ -92,12 +92,7 @@ const PrimaryDraw: React.FC<Props> = ({ children }) => {
               ? React.cloneElement(child as ChildElement, { open: open })
               : child;
           })
-        } */}
-        {[...Array(100)].map((_, i) => (
-          <Typography key={i} paragraph>
-            {i + 1}
-          </Typography>
-        ))}
+        }
         <Box
           sx={{
             position: "absolute",
@@ -107,7 +102,7 @@ const PrimaryDraw: React.FC<Props> = ({ children }) => {
             width: open ? "auto" : "100%",
           }}
         >
-          <DrawToggle
+          <ToggleDrawer
             open={open}
             handleDrawerOpen={handleDrawerOpen}
             handleDrawerClose={handleDrawerClose}

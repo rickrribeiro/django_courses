@@ -4,9 +4,19 @@ from rest_framework.response import Response
 from rest_framework.exceptions import ValidationError, AuthenticationFailed
 from django.db.models import Count
 from .schema import server_list_docs
+from rest_framework.permissions import IsAuthenticated
+from .models import Server, Category
+from .serializers import ServerSerializer, CategorySerializer
+from drf_spectacular.utils import extend_schema
 
-from .models import Server
-from .serializers import ServerSerializer
+
+class CategoryViewSet(viewsets.ViewSet):
+    queryset = Category.objects.all()
+
+    @extend_schema(responses=CategorySerializer)
+    def list(self, request):
+        serializer = CategorySerializer(self.queryset, many=True)
+        return Response(serializer.data)
 
 
 class ServerListViewSet(viewsets.ViewSet):
@@ -14,6 +24,7 @@ class ServerListViewSet(viewsets.ViewSet):
     queryset = (
         Server.objects.all()
     )  # todo - following the course, but remember to refactor it to dont load all servers in memory
+    # permission_classes = [IsAuthenticated]
 
     @server_list_docs
     def list(self, request):
@@ -53,8 +64,8 @@ class ServerListViewSet(viewsets.ViewSet):
 
         if qty:
             self.queryset = self.queryset[: int(qty)]
-
         serializer = ServerSerializer(
             self.queryset, many=True, context={"with_num_members": with_num_members}
         )
-        return Response(serializer.data)
+
+        return Response(serializer.data, 200)

@@ -3,6 +3,12 @@ from rest_framework import serializers
 from .models import Server, Category, Channel
 
 
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = "__all__"
+
+
 class ChannelSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -15,6 +21,7 @@ class ServerSerializer(serializers.ModelSerializer):
     channel_server = ChannelSerializer(
         many=True, read_only=True
     )  # has to be the same name as the related_name in the model
+    categories = serializers.StringRelatedField(many=True)
 
     class Meta:
         model = Server
@@ -22,7 +29,8 @@ class ServerSerializer(serializers.ModelSerializer):
 
         #    fields = "__all__"
         # read_only_fields = ["id"]
-        exclude = ["member"]  # all - member
+
+        exclude = ["members"]  # all - member
 
     def get_num_members(self, obj):
         if hasattr(obj, "num_members"):

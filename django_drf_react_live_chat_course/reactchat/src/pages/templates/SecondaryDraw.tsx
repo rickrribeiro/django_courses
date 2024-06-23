@@ -1,17 +1,7 @@
 import { Box, Typography, useTheme } from "@mui/material";
-import axios from "axios";
 
 const SecandaryDraw = () => {
   const theme = useTheme();
-
-  axios
-    .get("http://127.0.0.1:8000/api/server/select?category=category1")
-    .then((res) => {
-      console.log(res.data);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
 
   return (
     <Box

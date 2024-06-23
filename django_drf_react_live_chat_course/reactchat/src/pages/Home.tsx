@@ -1,5 +1,6 @@
 import { Box, CssBaseline } from "@mui/material";
 
+import PopularChannels from "@components/PrimaryDraw/PopularChannels";
 import { Main, PrimaryAppBar, PrimaryDraw, SecondaryDraw } from "./templates";
 
 const Home = () => {
@@ -7,7 +8,9 @@ const Home = () => {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <PrimaryAppBar />
-      <PrimaryDraw children={undefined} />
+      <PrimaryDraw>
+        <PopularChannels open={false} />
+      </PrimaryDraw>
       <SecondaryDraw />
       <Main />
     </Box>
